@@ -1,0 +1,27 @@
+{
+  "name": "@wessberg/globalobject",
+  "version": "1.0.8",
+  "description": "A package that returns a reference to the global object, depending on the current execution environment.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es2015/index.js",
+  "browser": "./dist/es2015/index.js",
+  "types": "./dist/es2015/index.d.ts",
+  "typings": "./dist/es2015/index.d.ts",
+  "scripts": {
+    "build:pre": "mkdir -p dist/cjs && mkdir -p dist/es2015",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs -p tsconfig.dist.json",
+    "build:es2015": "tsc --module es2015 --outDir dist/es2015 -p tsconfig.dist.json",
+    "build": "npm run build:pre && npm run build:cjs && npm run build:es2015"
+  },
+  "keywords": [
+    "global",
+    "window",
+    "self",
+    "context"
+  ],
+  "author": "Frederik Wessberg",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^7.0.13"
+  }
+}
