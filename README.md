@@ -1,4 +1,4 @@
-# SimpleLanguageService [![NPM version][npm-image]][npm-url]
+# GlobalObject [![NPM version][npm-image]][npm-url]
 > A package that returns a reference to the global object, depending on the current execution environment.
 
 ## Installation
