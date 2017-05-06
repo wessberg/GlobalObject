@@ -6,9 +6,17 @@ Simply do: `npm install @wessberg/globalobject`.
 
 ## Usage
 
-Just import it and use it!
+```typescript
+import {GlobalObject, GlobalObjectIdentifier} from "@wessberg/globalobect";
+// GlobalObject refers to 'self', 'global' or 'window'.
+// GlobalObjectIdentifier is the name of the identifier.
+```
 
 ## Changelog:
+
+**v1.0.2**:
+
+- Added a `GlobalObjectIdentifier` which is the string name of the global object.
 
 **v1.0**:
 
