@@ -1,6 +1,6 @@
 {
   "name": "@wessberg/globalobject",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package that returns a reference to the global object, depending on the current execution environment.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es2015/index.js",
