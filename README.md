@@ -14,6 +14,10 @@ import {GlobalObject, GlobalObjectIdentifier} from "@wessberg/globalobect";
 
 ## Changelog:
 
+**v1.0.3**:
+
+- Other global objects will now be shimmed so that "window", "self", "root" or "global" always refers to the actual global object, no matter the context.
+
 **v1.0.2**:
 
 - Added a `GlobalObjectIdentifier` which is the string name of the global object.
