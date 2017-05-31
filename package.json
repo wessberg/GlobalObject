@@ -8,7 +8,9 @@
   "types": "./dist/es2015/index.d.ts",
   "typings": "./dist/es2015/index.d.ts",
   "scripts": {
-    "build:pre": "mkdir -p dist/cjs && mkdir -p dist/es2015",
+    "clean:dist": "rm -r -f dist",
+    "clean": "npm run clean:dist",
+    "build:pre": "npm run clean && mkdir -p dist/cjs && mkdir -p dist/es2015",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs -p tsconfig.dist.json",
     "build:es2015": "tsc --module es2015 --outDir dist/es2015 -p tsconfig.dist.json",
     "build": "npm run build:pre && npm run build:cjs && npm run build:es2015"

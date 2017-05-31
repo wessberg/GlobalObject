@@ -1,10 +1,10 @@
 # GlobalObject [![NPM version][npm-image]][npm-url]
-> A package that returns a reference to the global object, depending on the current execution environment.
+> A package that shims and returns a reference to the global object, depending on the current execution environment.
 
 ## Installation
 Simply do: `npm install @wessberg/globalobject`.
 
-## Usage
+## Usage - in code
 
 ```typescript
 import {GlobalObject, GlobalObjectIdentifier} from "@wessberg/globalobect";
@@ -13,6 +13,10 @@ import {GlobalObject, GlobalObjectIdentifier} from "@wessberg/globalobect";
 ```
 
 ## Changelog:
+
+**v1.0.4**:
+
+- Added a new function that this module exports: `shimGlobalObject`. Calling this from anywhere will shim the "window", "self", "root" and "global" properties on the global object.
 
 **v1.0.3**:
 
