@@ -14,6 +14,10 @@ import {GlobalObject, GlobalObjectIdentifier} from "@wessberg/globalobect";
 
 ## Changelog:
 
+**v1.0.5**:
+
+- Added a new exported property: `shimGlobalObjectStringified` which is a stringified shim that can be added in top of a bundle.
+
 **v1.0.4**:
 
 - Added a new function that this module exports: `shimGlobalObject`. Calling this from anywhere will shim the "window", "self", "root" and "global" properties on the global object.
