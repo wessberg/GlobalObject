@@ -1,1 +1,1 @@
-export {GlobalObject, GlobalObjectIdentifier, shimGlobalObject, shimGlobalObjectStringified} from "./GlobalObject";
+export {globalObject, globalObjectIdentifier, shimGlobalObject, shimGlobalObjectStringified} from "./GlobalObject";

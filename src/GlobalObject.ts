@@ -1,28 +1,29 @@
-let GlobalObjectIdentifier: string;
+let globalObjectIdentifier: string;
 
+/**
+ * Detects the global object and returns it
+ * @returns {Window}
+ */
 export function shimGlobalObject () {
 	/* tslint:disable */
 	let root: any;
 	/* tslint:enable */
 	try {
 		root = self;
-		GlobalObjectIdentifier = "self";
+		globalObjectIdentifier = "self";
 		if (!("window" in root)) Object.defineProperty(root, "window", {value: self});
 		if (!("global" in root)) Object.defineProperty(root, "global", {value: self});
-		if (!("root" in root)) Object.defineProperty(root, "root", {value: self});
 	} catch (e) {
 		try {
 			root = global;
-			GlobalObjectIdentifier = "global";
+			globalObjectIdentifier = "global";
 			if (!("window" in root)) Object.defineProperty(root, "window", {value: global});
 			if (!("self" in root)) Object.defineProperty(root, "self", {value: global});
-			if (!("root" in root)) Object.defineProperty(root, "root", {value: global});
 		} catch (e) {
 			root = window;
-			GlobalObjectIdentifier = "window";
+			globalObjectIdentifier = "window";
 			if (!("global" in root)) Object.defineProperty(root, "global", {value: window});
 			if (!("self" in root)) Object.defineProperty(root, "self", {value: window});
-			if (!("root" in root)) Object.defineProperty(root, "root", {value: window});
 		}
 	}
 	return root;
@@ -35,23 +36,20 @@ export const shimGlobalObjectStringified = `
 		root = self;
 		if (!("window" in root)) Object.defineProperty(root, "window", {value: self});
 		if (!("global" in root)) Object.defineProperty(root, "global", {value: self});
-		if (!("root" in root)) Object.defineProperty(root, "root", {value: self});
 	} catch (e) {
 		try {
 			root = global;
 			if (!("window" in root)) Object.defineProperty(root, "window", {value: global});
 			if (!("self" in root)) Object.defineProperty(root, "self", {value: global});
-			if (!("root" in root)) Object.defineProperty(root, "root", {value: global});
 		} catch (e) {
 			root = window;
 			if (!("global" in root)) Object.defineProperty(root, "global", {value: window});
 			if (!("self" in root)) Object.defineProperty(root, "self", {value: window});
-			if (!("root" in root)) Object.defineProperty(root, "root", {value: window});
 		}
 	}
 	return root;
 })();
 `;
 
-export const GlobalObject: Window = shimGlobalObject();
-export {GlobalObjectIdentifier};
+export const globalObject: Window = shimGlobalObject();
+export {globalObjectIdentifier};
