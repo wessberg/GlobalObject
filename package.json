@@ -1,6 +1,6 @@
 {
 	"name": "@wessberg/globalobject",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "A package that returns a reference to the global object, depending on the current execution environment.",
 	"scripts": {
 		"changelog:generate": "conventional-changelog --outfile CHANGELOG.md --release-count 0",
