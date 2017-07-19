@@ -1,8 +1,18 @@
+<a name="1.0.7"></a>
+## 1.0.7 (2017-07-19)
+
+* 1.0.7 ([c9a80af](https://github.com/wessberg/globalobject/commit/c9a80af))
+* Bumped version ([35450e9](https://github.com/wessberg/globalobject/commit/35450e9))
+
+
+
 <a name="1.0.6"></a>
 ## 1.0.6 (2017-07-19)
 
 * - Migrated to common ts-config configuration. ([7750b56](https://github.com/wessberg/globalobject/commit/7750b56))
 * 1.0.6 ([a90e4fc](https://github.com/wessberg/globalobject/commit/a90e4fc))
+* Update .gitignore ([12262a6](https://github.com/wessberg/globalobject/commit/12262a6))
+* Update package.json ([db4d697](https://github.com/wessberg/globalobject/commit/db4d697))
 
 
 
